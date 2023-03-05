@@ -17,18 +17,18 @@ export default function Sidebar() {
   return (
     <div className="hidden sm:flex flex-col items-center xl:items-start xl:w-[340px] p-2 fixed h-full">
       <div className="flex items-center justify-center w-14 h-14 hoverAnimation p-0 xl:ml-24">
-        <Image src="https://rb.gy/ogau5a" width={30} height={30} alt={""} />
+        <Image src="https://icon-library.com/images/twitter-icon-svg/twitter-icon-svg-28.jpg" width={30} height={30} alt={""} />
       </div>
 
       <div className="space-y-2.5 mt-4 mb-2.5 xl:ml-24">
         <SidebarLink text="Home" Icon={HomeIcon} active />
-        <SidebarLink text="Explore" Icon={HashtagIcon} />
-        <SidebarLink text="Notifications" Icon={BellIcon} />
-        <SidebarLink text="Messages" Icon={InboxIcon} />
-        <SidebarLink text="Bookmarks" Icon={BookmarkIcon} />
-        <SidebarLink text="Lists" Icon={ClipboardIcon} />
-        <SidebarLink text="Profile" Icon={UserIcon} />
-        <SidebarLink text="More" Icon={EllipsisHorizontalCircleIcon} />
+        <SidebarLink text="Explore" Icon={HashtagIcon} active={false} />
+        <SidebarLink text="Notifications" Icon={BellIcon} active={false} />
+        <SidebarLink text="Messages" Icon={InboxIcon} active={false} />
+        <SidebarLink text="Bookmarks" Icon={BookmarkIcon} active={false} />
+        <SidebarLink text="Lists" Icon={ClipboardIcon} active={false} />
+        <SidebarLink text="Profile" Icon={UserIcon} active={false} />
+        <SidebarLink text="More" Icon={EllipsisHorizontalCircleIcon} active={false} />
       </div>
 
       <button
@@ -42,7 +42,7 @@ export default function Sidebar() {
       xl:ml-auto xl:-mr-5 mt-auto">
 
         <img
-          src="https://lh3.googleusercontent.com/ogw/AAEL6sjVBUmfYB6IXhQb-jKqLGns4GQGL7adJPzGWCaysA=s32-c-mo"
+          src="https://yt3.ggpht.com/yti/AHXOFjXaGDCBVqjyb6lqvFT1BPW6UXYzn-HiU1z7jsvOsg=s88-c-k-c0x00ffffff-no-rj-mo"
           alt=""
           className="h-10 w-10 rounded-full xl:mr-2.5"
         />
