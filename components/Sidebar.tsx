@@ -42,7 +42,7 @@ export default function Sidebar() {
       xl:ml-auto xl:-mr-5 mt-auto">
 
         <img
-          src="https://yt3.ggpht.com/yti/AHXOFjXaGDCBVqjyb6lqvFT1BPW6UXYzn-HiU1z7jsvOsg=s88-c-k-c0x00ffffff-no-rj-mo"
+          src="https://yt3.ggpht.com/VoEBu0KxtQkfWretx-3_NqxKnoLqfKNTtWq0KFigdqaqVQFz8CggKgqkcxXqCDW7zYWlZZJOuQ=s48-c-k-c0x00ffffff-no-rjAHXOFjXaGDCBVqjyb6lqvFT1BPW6UXYzn-HiU1z7jsvOsg=s88-c-k-c0x00ffffff-no-rj-mo"
           alt=""
           className="h-10 w-10 rounded-full xl:mr-2.5"
         />
