@@ -32,9 +32,9 @@ export default function Feed(){
             </div>
 
             <Input />
-
+            
             <div className='pb-72'>
-                {posts.map(post => (
+                {posts.map((post)=> (
                     <Post key={post.id} id={post.id} post={post.data()} />
                 ))}
             </div>

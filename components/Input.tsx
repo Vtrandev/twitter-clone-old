@@ -78,7 +78,8 @@ export default function Input() {
 
   return (
     <div
-      className={`border-b border-gray-700 p-3 flex space-x-3 overflow-y-scroll ${loading && "opacity-60"}`}
+      className={`border-b border-gray-700 p-3 flex space-x-3 scrollbar-hide
+      ${loading && "opacity-60"}`}
     >
       <img
         src={session?.user.image}
@@ -99,8 +100,8 @@ export default function Input() {
           {selectedFile && (
             <div className="relative">
               <div
-                className="absolute w-8-h-8 bg-[#15181c] hover:bg-[#272c26] bg-opacity-75 rounded-full flex items-center justify-center
-            top-1 left-1 cursor-pointer"
+                className="absolute w-8-h-8 bg-[#15181c] hover:bg-[#272c26] bg-opacity-75
+                rounded-full flex items-center justify-center top-1 left-1 cursor-pointer"
                 onClick={() => setSelectedFile(null)}
               >
                 <XMarkIcon className="text-white h-5" />
@@ -115,7 +116,7 @@ export default function Input() {
         </div>
 
         {!loading && (
-          <div className="flex items justify-between pt-2.5">
+          <div className="flex items-center justify-between pt-2.5">
             <div className="flex items-center">
               <div
                 className="icon"
@@ -146,22 +147,23 @@ export default function Input() {
                 <Picker
                   data={data}
                   onEmojiSelect={addEmoji}
-                  className="absolute"
-                  // className="absolute mt-[465px] -ml-[40px] max-w-[320px] rounded-full"
-                  // style={{
-                  //   position: "absolute",
-                  //   marginTop: `465px`,
-                  //   marginLeft: "220px",
-                  //   maxWidth: "320px",
-                  //   borderRadius: "20px",
-                  // }}
+                  // className="absolute"
+                  className="absolute mt-[465px] -ml-[40px] max-w-[320px] rounded-full"
+                  style={{
+                    position: "absolute",
+                    marginTop: `465px`,
+                    marginLeft: "220px",
+                    maxWidth: "320px",
+                    borderRadius: "20px",
+                  }}
                   theme="dark"
                 />
               )}
             </div>
             <button
               className="bg-[#1d9bf0] text-white rounded-full px-4 py-1.5 font-bold 
-     shadow-md hover:bg-[#1a8cd8] disabled:hover:bg-[#1d9bf0] disabled:opacity-50 disabled:cursor-default"
+              shadow-md hover:bg-[#1a8cd8] disabled:hover:bg-[#1d9bf0] disabled:opacity-50 
+              disabled:cursor-default"
               disabled={!input.trim() && !selectedFile}
               onClick={sendPost}
             >

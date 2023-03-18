@@ -42,8 +42,8 @@ export default function Sidebar() {
         Tweet
       </button>
 
-      <div className="text-[#d9d9d9] flex items-center justify-center hoverAnimation
-      xl:ml-auto xl:-mr-5 mt-auto" onClick={signOut}>
+      <div className="text-[#d9d9d9] flex items-center mt-auto hoverAnimation
+      xl:ml-24 xl:w-64" onClick={signOut}>
 
         <img
           src={session.user.image}
@@ -56,7 +56,7 @@ export default function Sidebar() {
             <p className="text-[#6e767d]">@{session?.user.tag}</p>
         </div>
 
-        <EllipsisHorizontalIcon className="h-5 hidden xl:inline ml-10" />
+        <EllipsisHorizontalIcon className="h-6 hidden xl:inline ml-auto" />
 
       </div>
     </div>
