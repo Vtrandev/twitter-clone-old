@@ -22,9 +22,9 @@ export default function Widgets({ trendingResults, followResults }) {
 
       <div className="text-[#d9d9d9] space-y-3 bg-[#15181c] pt-2 rounded-xl w-11/12 xl:w-9/12">
         <h4 className="font-bold text-xl px-4">What's happening?</h4>
-        {trendingResults.map((result, index) => (
+        {/* {trendingResults.map((result, index) => (
           <Trending key={index} result={result} />
-        ))}
+        ))} */}
         <button className="hover:bg-white hover:bg-opacity-[0.03] px-4 py-3 cursor-pointer transition duration-200 ease-out flex items-center justify-between w-full text-[#1d9bf0]">
           Show more
         </button>
@@ -32,7 +32,7 @@ export default function Widgets({ trendingResults, followResults }) {
 
       <div className="text-[#d9d9d9] space-y-3 bg-[#15181c] pt-2 rounded-xl w-11/12 xl:w-9/12">
         <h4 className="font-bold text-xl px-4">Who to follow</h4>
-        {followResults.map((follow, index) => (
+        {/* {followResults.map((follow, index) => (
           <div className="hover:bg-white hover:bg-opacity-[0.03] px-4 py-3 cursor-pointer transition duration-200 ease-out flex items-center">
             <Image
             src={follow.userImg}
@@ -52,7 +52,7 @@ export default function Widgets({ trendingResults, followResults }) {
              </div>
              <button className="ml-auto bg-white text-black rounded-full font-bold text-sm py-1.5 px-3.5">Follow</button>
           </div>
-        ))}
+        ))} */}
         <button className="hover:bg-white hover:bg-opacity-[0.03] px-4 py-3 cursor-pointer transition duration-200 ease-out flex items-center justify-between w-full text-[#1d9bf0]">
           Show more
         </button>

@@ -148,14 +148,14 @@ export default function Input() {
                   data={data}
                   onEmojiSelect={addEmoji}
                   // className="absolute"
-                  className="absolute mt-[465px] -ml-[40px] max-w-[320px] rounded-full"
-                  style={{
-                    position: "absolute",
-                    marginTop: `465px`,
-                    marginLeft: "220px",
-                    maxWidth: "320px",
-                    borderRadius: "20px",
-                  }}
+                  className="em-emoji-picker"
+                  // style={{
+                  //   position: "absolute",
+                  //   marginTop: `465px`,
+                  //   marginLeft: "220px",
+                  //   maxWidth: "320px",
+                  //   borderRadius: "20px",
+                  // }}
                   theme="dark"
                 />
               )}

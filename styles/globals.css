@@ -23,4 +23,9 @@
   .tag {
     @apply text-[#ad9bf0] font-normal hover:underline cursor-pointer;
   }
+
+  .em-emoji-picker {
+    @apply absolute max-w-[300px] rounded-3xl -ml-10;
+  }
+
 }
