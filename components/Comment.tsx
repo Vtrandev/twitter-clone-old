@@ -7,7 +7,7 @@ import {
   } from "@heroicons/react/24/solid";
 import { ChartBarIcon, ChatBubbleLeftIcon, HeartIcon, ShareIcon } from "@heroicons/react/24/outline";
 
-export default function Comment({ comment }) {
+export default function Comment({ id, comment }: any) {
   return (
     <div className="p-3 flex cursor-pointer border-b border-gray-700">
 
