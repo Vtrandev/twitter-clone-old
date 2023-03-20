@@ -8,12 +8,11 @@ import { useSession } from 'next-auth/react';
 
 export default function Feed(){
     const { data: session } = useSession();
-    const [posts, setPosts] = useState<DocumentData>([]);
+    const [posts, setPosts] = useState<any[]>([]);
 
     useEffect(
         () =>
-          onSnapshot(
-            query(collection(db, "posts"), orderBy("timestamp", "desc")),
+          onSnapshot(query(collection(db, "posts"), orderBy("timestamp", "desc")),
             (snapshot) => {
               setPosts(snapshot.docs);
             }
