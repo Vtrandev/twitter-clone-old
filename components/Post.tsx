@@ -27,7 +27,7 @@ import { modalState, postIdState } from "../atoms/modalAtom";
 import Moment from "react-moment";
 import { useRouter } from "next/router";
 
-export default function Post({ id, post, postPage }) {
+export default function Post({ id, post, postPage }: any) {
   const { data: session } = useSession();
   const [isOpen, setIsOpen] = useRecoilState(modalState);
   const [postId, setPostId] = useRecoilState(postIdState);
@@ -64,10 +64,10 @@ export default function Post({ id, post, postPage }) {
 
   const likePost = async () => {
     if (liked) {
-      await deleteDoc(doc(db, "posts", id, "likes", session.user.uid));
+      await deleteDoc(doc(db, "posts", id, "likes", session?.user?.uid));
     } else {
-      await setDoc(doc(db, "posts", id, "likes", session.user.uid), {
-        username: session.user.name,
+      await setDoc(doc(db, "posts", id, "likes", session?.user?.uid), {
+        username: session?.user?.name,
       });
     }
   };
@@ -166,7 +166,7 @@ export default function Post({ id, post, postPage }) {
             )}
           </div>
 
-          {session.user.uid === post?.id ? (
+          {session?.user?.uid === post?.id ? (
             <div
               className="flex items-center space-x-1 group"
               onClick={(e) => {
