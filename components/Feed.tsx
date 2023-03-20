@@ -10,15 +10,28 @@ export default function Feed(){
     const { data: session } = useSession();
     const [posts, setPosts] = useState<any[]>([]);
 
-    useEffect(
-        () =>
-          onSnapshot(query(collection(db, "posts"), orderBy("timestamp", "desc")),
+    // useEffect(
+    //     () =>
+    //       onSnapshot(query(collection(db, "posts"), orderBy("timestamp", "desc")),
+    //         (snapshot) => {
+    //           setPosts(snapshot.docs);
+    //         }
+    //       ),
+    //     [db]
+    //   );
+
+      useEffect(() => {
+          const unsubscribe = onSnapshot(
+            query(collection(db, "posts"), orderBy("timestamp", "desc")),
             (snapshot) => {
               setPosts(snapshot.docs);
             }
-          ),
-        [db]
-      );
+          );
+      
+          return () => {
+            unsubscribe();
+          };
+        }, [db]);
 
     return(
         <div className='text-white flex-grow border-l border-r border-gray-700 max-w-2xl
