@@ -72,18 +72,6 @@ export default function Post({ id, post, postPage }) {
     }
   };
 
-  useEffect(
-    () =>
-      onSnapshot(
-        query(
-          collection(db, "posts", id, "comments"),
-          orderBy("timestamps", "desc")
-        ),
-        (snapshot) => setComments(snapshot.docs)
-      ),
-    [db, id]
-  );
-
   return (
     <div
       className="p-3 flex cursor-pointer border-b border-gray-700"
