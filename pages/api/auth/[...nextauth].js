@@ -13,7 +13,7 @@ export const authOptions = {
     }),
   ],
   callbacks: {
-    async session({ session, token }: any) {
+    async session({ session, token }) {
       session.user.tag = session.user.name
         .split(" ")
         .join("")

@@ -27,7 +27,7 @@ import { modalState, postIdState } from "../atoms/modalAtom";
 import Moment from "react-moment";
 import { useRouter } from "next/router";
 
-export default function Post({ id, post, postPage }: any) {
+export default function Post({ id, post, postPage }) {
   const { data: session } = useSession();
   const [isOpen, setIsOpen] = useRecoilState(modalState);
   const [postId, setPostId] = useRecoilState(postIdState);
@@ -57,7 +57,7 @@ export default function Post({ id, post, postPage }: any) {
   useEffect(
     () =>
       setLiked(
-        likes.findIndex((like: any) => like.id === session?.user?.uid) !== -1
+        likes.findIndex((like) => like.id === session?.user?.uid) !== -1
       ),
     [likes]
   );
