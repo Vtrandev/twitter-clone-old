@@ -57,7 +57,7 @@ export default function Post({ id, post, postPage }) {
   useEffect(
     () =>
       setLiked(
-        likes.findIndex((like) => like.id === session?.user?.uid) !== -1
+        likes.findIndex((like: any) => like.id === session?.user?.uid) !== -1
       ),
     [likes]
   );
