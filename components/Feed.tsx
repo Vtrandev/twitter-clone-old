@@ -48,7 +48,7 @@ export default function Feed(){
             
             <div className='pb-72'>
                 {posts.map((post)=> (
-                    <Post key={post.id} id={post.id} post={post.data()} />
+                    <Post key={post.id} id={post.id} post={post.data()} postPage={false} />
                 ))}
             </div>
 
