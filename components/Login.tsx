@@ -1,7 +1,7 @@
 import { signIn } from "next-auth/react";
 import Image from "next/image";
 
-export default function Login({ providers }) {
+export default function Login({ providers }: any) {
   return (
     <div className="flex flex-col items-center space-y-20 pt-48">
       <Image

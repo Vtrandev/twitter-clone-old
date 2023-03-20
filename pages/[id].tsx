@@ -36,8 +36,8 @@ export default function PostPage({trendingResults, followResults, providers} : a
     () =>
       onSnapshot(
         query(collection(db, "posts", id, "comments"),
-        orderBy("timestamp", "desc")),
-        (snapshot) => setComments(snapshot.docs)
+        orderBy("timestamp", "desc")),(
+        (snapshot) => setComments(snapshot.docs))
       ),
     [db, id]
   );

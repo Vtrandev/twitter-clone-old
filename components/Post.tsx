@@ -27,7 +27,7 @@ import { modalState, postIdState } from "../atoms/modalAtom";
 import Moment from "react-moment";
 import { useRouter } from "next/router";
 
-export default function Post({ id, post, postPage }) {
+export default function Post({ id, post, postPage }: any) {
   const { data: session } = useSession();
   const [isOpen, setIsOpen] = useRecoilState(modalState);
   const [postId, setPostId] = useRecoilState(postIdState);
